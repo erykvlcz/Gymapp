@@ -6,16 +6,32 @@ public enum Pass {
     EXTENDED("rozszerzony",140, 20, 2),
     PREMIUM("premium", 180, 1000, 1000);
 
-    private String name;
-    private double price;
-    private int entersNumber;
-    private int enterPerDay;
+    private final String name;
+    private final double price;
+    private final int entersNumber;
+    private final int enterPerDay;
 
     Pass(String name, double price, int entersNumber, int enterPerDay) {
         this.name = name;
         this.price = price;
         this.entersNumber = entersNumber;
         this.enterPerDay = enterPerDay;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public int getEntersNumber() {
+        return entersNumber;
+    }
+
+    public int getEnterPerDay() {
+        return enterPerDay;
     }
 
     @Override
@@ -27,4 +43,5 @@ public enum Pass {
                 ", enterPerDay=" + enterPerDay +
                 '}';
     }
+
 }
